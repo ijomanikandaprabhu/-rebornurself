@@ -889,3 +889,12 @@
   
 
 })(jQuery);
+  /*---------- Gallery Arrow Navigation ----------*/
+  $('.gallery-prev').on('click', function() {
+    $(this).siblings('.vs-carousel').slick('slickPrev');
+  });
+  
+  $('.gallery-next').on('click', function() {
+    $(this).siblings('.vs-carousel').slick('slickNext');
+  });
+

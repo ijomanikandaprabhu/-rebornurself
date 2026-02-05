@@ -14188,3 +14188,93 @@ blockquote.vs-quote cite:before {
     margin-bottom: 5px;
   }
 }
+
+.vs-carousel .slick-prev,
+.vs-carousel .slick-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  border: none;
+  background-color: var(--white-color);
+  color: var(--theme-color);
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 18px;
+  padding: 0;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  visibility: visible;
+}
+
+.vs-carousel .slick-prev::before,
+.vs-carousel .slick-next::before {
+  font-family: var(--icon-font);
+  font-weight: 300;
+  font-style: normal;
+  display: inline-block;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.vs-carousel .slick-prev::before {
+  content: "\f104";
+}
+
+.vs-carousel .slick-next::before {
+  content: "\f105";
+}
+
+.vs-carousel .slick-prev:hover,
+.vs-carousel .slick-next:hover {
+  background-color: var(--theme-color);
+  color: var(--white-color);
+}
+
+.vs-carousel .slick-prev {
+  left: -25px;
+  /* Adjust for container alignment */
+}
+
+.vs-carousel .slick-next {
+  right: -25px;
+}
+
+/* Adjust for mobile */
+@media (max-width: 1200px) {
+  .vs-carousel .slick-prev {
+    left: 10px;
+  }
+
+  .vs-carousel .slick-next {
+    right: 10px;
+  }
+}
+/* Gallery Arrow Buttons */
+.gallery-arrow {
+  transition: all 0.3s ease;
+}
+
+.gallery-arrow:hover {
+  background-color: #9a563a !important;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.gallery-arrow:hover i {
+  color: white !important;
+}
+
+@media (max-width: 1200px) {
+  .gallery-prev {
+    left: 10px !important;
+  }
+  .gallery-next {
+    right: 10px !important;
+  }
+}
