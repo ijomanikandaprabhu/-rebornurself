@@ -15026,132 +15026,6 @@ blockquote.vs-quote cite:before {
 }
 
 /*==============================
-  Services by gender (home)
-==============================*/
-.svc-toggle {
-  display: inline-flex;
-  gap: 6px;
-  margin: 0 auto 42px;
-  padding: 6px;
-  border-radius: 50px;
-  background-color: var(--secondary-color);
-}
-.svc-section .svc-toggle {
-  display: flex;
-  width: max-content;
-  margin-left: auto;
-  margin-right: auto;
-}
-.svc-tab {
-  min-width: 132px;
-  padding: 12px 28px;
-  border: none;
-  border-radius: 50px;
-  background-color: transparent;
-  color: var(--title-color);
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0.04em;
-  cursor: pointer;
-  transition: background-color ease 0.3s, color ease 0.3s;
-}
-.svc-tab:hover {
-  color: var(--theme-color);
-}
-.svc-tab.is-active {
-  background-color: var(--theme-color);
-  color: var(--white-color);
-}
-.svc-tab:focus-visible {
-  outline: 2px solid var(--theme-color);
-  outline-offset: 3px;
-}
-.svc-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: 34px 30px;
-  border: 1px solid rgba(18, 31, 56, 0.08);
-  border-radius: 12px;
-  background-color: var(--white-color);
-  box-shadow: 0 6px 24px rgba(18, 31, 56, 0.05);
-  transition: transform ease 0.3s, box-shadow ease 0.3s;
-}
-.svc-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 36px rgba(18, 31, 56, 0.1);
-}
-.svc-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 76px;
-  height: 76px;
-  margin-bottom: 22px;
-  border-radius: 50%;
-  background-color: var(--secondary-color);
-}
-.svc-icon img {
-  width: 42px;
-  height: auto;
-}
-.svc-title {
-  margin-bottom: 10px;
-  font-size: 21px;
-}
-.svc-title a {
-  color: var(--title-color);
-}
-.svc-title a:hover {
-  color: var(--theme-color);
-}
-.svc-text {
-  margin: 0 0 22px;
-  font-size: 15px;
-  line-height: 1.7;
-}
-.svc-btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  margin-top: auto;
-  align-self: flex-start;
-  padding: 11px 22px;
-  border-radius: 50px;
-  background-color: #25d366;
-  color: var(--white-color);
-  font-size: 14px;
-  font-weight: 500;
-  transition: background-color ease 0.3s, transform ease 0.3s;
-}
-.svc-btn i {
-  font-size: 17px;
-}
-.svc-btn:hover {
-  background-color: #1da851;
-  color: var(--white-color);
-  transform: translateY(-2px);
-}
-.svc-btn:focus-visible {
-  outline: 2px solid var(--title-color);
-  outline-offset: 3px;
-}
-.svc-panel[hidden] {
-  display: none;
-}
-@media (max-width: 575px) {
-  .svc-tab {
-    min-width: 116px;
-    padding: 11px 20px;
-    font-size: 14px;
-  }
-  .svc-card {
-    padding: 28px 22px;
-  }
-}
-
-/*==============================
   Equal-height carousel slides
   Slick sizes each slide to its own content, so a card with one extra
   line of text sticks out below its neighbours. Stretch the track
@@ -15172,4 +15046,215 @@ blockquote.vs-quote cite:before {
 .vs-carousel .slick-slide > .feature-style2,
 .vs-carousel .slick-slide > .gallery-style1 {
   flex: 1 1 auto;
+}
+
+
+/*==============================
+  Services by gender (home)
+==============================*/
+.svc-toggle {
+  display: flex;
+  width: max-content;
+  gap: 6px;
+  margin: 0 auto 78px;
+  padding: 6px;
+  border-radius: 50px;
+  background-color: var(--secondary-color);
+}
+.svc-tab {
+  min-width: 140px;
+  padding: 13px 30px;
+  border: none;
+  border-radius: 50px;
+  background-color: transparent;
+  color: var(--title-color);
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: background-color ease 0.3s, color ease 0.3s;
+}
+.svc-tab:hover {
+  color: var(--theme-color);
+}
+.svc-tab.is-active {
+  background-color: var(--theme-color);
+  color: var(--white-color);
+}
+.svc-tab:focus-visible {
+  outline: 2px solid var(--theme-color);
+  outline-offset: 3px;
+}
+.svc-panel[hidden] {
+  display: none;
+}
+.svc-panel .row {
+  --bs-gutter-y: 76px;
+}
+
+/* card */
+.svc-card {
+  --medallion: 104px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-top: calc(var(--medallion) / 2);
+  padding: calc(var(--medallion) / 2 + 26px) 32px 34px;
+  text-align: center;
+  border-radius: 14px;
+  background-color: var(--white-color);
+  outline: 1px dashed rgba(154, 86, 58, 0.45);
+  outline-offset: -14px;
+  box-shadow: 1.5px 2.6px 15px 1px rgba(116, 117, 117, 0.1);
+  transition: transform ease 0.35s, box-shadow ease 0.35s;
+}
+.svc-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 42px rgba(18, 31, 56, 0.12);
+}
+.svc-medallion {
+  position: absolute;
+  top: calc(var(--medallion) / -2);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--medallion);
+  height: var(--medallion);
+  border-radius: 50%;
+  background-color: #fde7da;
+  box-shadow: 0 0 0 8px var(--white-color);
+  transition: transform ease 0.35s;
+}
+.svc-card:hover .svc-medallion {
+  transform: translateX(-50%) scale(1.05);
+}
+.svc-medallion img {
+  width: 50px;
+  height: auto;
+}
+.svc-body {
+  flex: 1 1 auto;
+}
+.svc-title {
+  margin-bottom: 10px;
+  font-size: 22px;
+}
+.svc-title a {
+  color: var(--title-color);
+}
+.svc-title a:hover {
+  color: var(--theme-color);
+}
+.svc-divider {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 14px;
+}
+.svc-divider i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: rgba(154, 86, 58, 0.35);
+}
+.svc-divider i:nth-child(2) {
+  background-color: var(--theme-color);
+}
+.svc-text {
+  margin: 0 auto;
+  max-width: 290px;
+  font-size: 15px;
+  line-height: 1.72;
+  color: #6f6c6c;
+}
+.svc-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 26px;
+}
+.svc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 26px;
+  border-radius: 50px;
+  background-color: #25d366;
+  color: var(--white-color);
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color ease 0.3s, transform ease 0.3s;
+}
+.svc-btn i {
+  font-size: 17px;
+}
+.svc-btn:hover {
+  background-color: #1da851;
+  color: var(--white-color);
+  transform: translateY(-2px);
+}
+.svc-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--theme-color);
+  font-size: 14px;
+  font-weight: 500;
+  transition: gap ease 0.3s;
+}
+.svc-link i {
+  font-size: 12px;
+}
+.svc-link:hover {
+  color: var(--theme-color);
+  gap: 11px;
+}
+.svc-btn:focus-visible,
+.svc-link:focus-visible {
+  outline: 2px solid var(--theme-color);
+  outline-offset: 3px;
+}
+@media (max-width: 575px) {
+  .svc-tab {
+    min-width: 120px;
+    padding: 11px 22px;
+    font-size: 14px;
+  }
+  .svc-card {
+    --medallion: 92px;
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .svc-title {
+    font-size: 20px;
+  }
+}
+
+/*==============================
+  Keep the footer clear of the floating buttons
+  The WhatsApp pill and scroll-to-top are fixed to the viewport, so at
+  the very bottom of the page they sat on top of the copyright line.
+==============================*/
+.footer-layout2 {
+  padding-bottom: 34px;
+}
+@media (max-width: 991px) {
+  .footer-layout2 {
+    padding-bottom: 96px;
+  }
+}
+
+
+/*==============================
+  CTA WhatsApp button icon spacing
+==============================*/
+.vs-btn.style7 i {
+  margin-right: 9px;
+  font-size: 18px;
+  vertical-align: -2px;
 }

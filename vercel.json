@@ -74,6 +74,11 @@
       "source": "/appointment.html",
       "destination": "/contact.html",
       "permanent": true
+    },
+    {
+      "source": "/Molecreation.html",
+      "destination": "/beauty-spot.html",
+      "permanent": true
     }
   ]
 }
