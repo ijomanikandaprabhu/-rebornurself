@@ -15150,3 +15150,24 @@ blockquote.vs-quote cite:before {
     padding: 28px 22px;
   }
 }
+
+/*==============================
+  Equal-height carousel slides
+  Slick sizes each slide to its own content, so a card with one extra
+  line of text sticks out below its neighbours. Stretch the track
+  instead so every card in a row ends at the same point.
+==============================*/
+.vs-carousel .slick-track {
+  display: flex;
+  align-items: stretch;
+}
+.vs-carousel .slick-slide {
+  height: auto;
+}
+.vs-carousel .slick-slide > div {
+  height: 100%;
+}
+.vs-carousel .feature-style2,
+.vs-carousel .gallery-style1 {
+  height: 100%;
+}
