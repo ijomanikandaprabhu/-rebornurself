@@ -61,7 +61,7 @@
     <!-- Slick Slider -->
     <link rel="stylesheet" href="assets/css/slick.min.css">
     <!-- Theme Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css?v=20260810c">
+    <link rel="stylesheet" href="assets/css/style.css?v=20260810d">
 
     <script type="application/ld+json">
 {
@@ -358,7 +358,7 @@ Popup Search Box
                           <input type="text" name="name" id="name" placeholder="Your Name*" required>
                         </div>
                         <div class="form-group">
-                          <input type="email" name="email" id="email" placeholder="Your Email*" required>
+                          <input type="email" name="email" id="email" placeholder="Your Email">
                         </div>
                         <div class="form-group">
                           <input type="number" name="number" id="number" placeholder="Phone Number*" required>
@@ -366,6 +366,16 @@ Popup Search Box
                         <input type="hidden" name="_next" value="https://rebornurself.com/thank-you.html">
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
+                        <div class="form-group">
+                          <div class="select-field">
+                          <select name="gender" id="gender">
+                            <option selected disabled hidden value="">Gender</option>
+                            <option value="Female">Female</option>
+                            <option value="Male">Male</option>
+                          </select>
+                          <i class="fal fa-angle-down select-field-icon"></i>
+                          </div>
+                        </div>
                         <div class="form-group">
                           <div class="select-field">
                           <select name="selected_service" id="subject" required>
@@ -382,7 +392,7 @@ Popup Search Box
                           </div>
                         </div>
                         <div class="form-group">
-                          <textarea name="message" id="message" placeholder="Message*" required></textarea>
+                          <textarea name="message" id="message" placeholder="Message"></textarea>
                         </div>
                         <button class="vs-btn" type="submit">Send Message</button>
                         <p class="form-hint">WhatsApp will open with your details ready &mdash; just press send.</p>
@@ -653,7 +663,7 @@ Popup Search Box
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>
     <!-- Main Js File -->
-    <script src="assets/js/main.js?v=20260810c"></script>
+    <script src="assets/js/main.js?v=20260810d"></script>
 
 
     <script>
@@ -690,6 +700,7 @@ Popup Search Box
                 add('Name', 'name');
                 add('Email', 'email');
                 add('Phone', 'number');
+                add('Gender', 'gender');
                 add('Service', 'selected_service');
                 var msg = val('message');
                 if (msg) { lines.push(''); lines.push(msg); }
