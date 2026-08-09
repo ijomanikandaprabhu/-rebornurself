@@ -61,7 +61,7 @@
     <!-- Slick Slider -->
     <link rel="stylesheet" href="assets/css/slick.min.css">
     <!-- Theme Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css?v=20260809j">
+    <link rel="stylesheet" href="assets/css/style.css?v=20260809k">
 
     <script type="application/ld+json">
 {
@@ -351,7 +351,7 @@ Popup Search Box
           <div class="container">
               <div class="row gx-0">
                   <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
-                      <form action="https://formsubmit.co/rebornurself.business@gmail.com" method="POST" class="form-style11">
+                      <form action="https://formsubmit.co/rebornurself.business@gmail.com" method="POST" class="form-style11" id="appointmentForm">
                           <span class="sec-subtitle">Make Appointment</span>
                           <h2 class="sec-title">Brows, Lips, Confidence – Schedule Today!</h2>
                           <div class="row">
@@ -390,13 +390,10 @@ Popup Search Box
                                   </select>
                               </div>
                               <div class="form-group col-12">
-                                  <input type="date" name="Appointment Date" placeholder="Select Date" class="">
-                              </div>
-                              <div class="form-group col-12">
-                                  <input type="time" name="Appointment Time" placeholder="Select Time" class="">
+                                  <textarea name="Message" placeholder="Your message (optional)" rows="4"></textarea>
                               </div>
                               <div class="from-btn">
-                                  <button class="vs-btn style7">Make Appointment</button>
+                                  <button type="submit" class="vs-btn style7">Make Appointment</button>
                               </div>
                           </div>
                       </form>
@@ -613,9 +610,38 @@ Popup Search Box
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>
     <!-- Main Js File -->
-    <script src="assets/js/main.js?v=20260809j"></script>
+    <script src="assets/js/main.js?v=20260809k"></script>
 
 
+    <script>
+        (function () {
+            var form = document.getElementById('appointmentForm');
+            if (!form) return;
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var val = function (name) {
+                    var el = form.querySelector('[name="' + name + '"]');
+                    return el && el.value ? el.value.trim() : '';
+                };
+                var lines = ['Hi Rebornurself, I would like to book an appointment.', ''];
+                var first = val('First Name'), last = val('Last Name');
+                var name = (first + ' ' + last).trim();
+                if (name) lines.push('Name: ' + name);
+                var add = function (label, field) {
+                    var v = val(field);
+                    if (v) lines.push(label + ': ' + v);
+                };
+                add('Email', 'email');
+                add('Phone', 'Phone Number');
+                add('Gender', 'Gender');
+                add('Service', 'Selected Services');
+                var msg = val('Message');
+                if (msg) { lines.push(''); lines.push(msg); }
+                window.open('https://wa.me/918090111911?text=' +
+                    encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
+            });
+        })();
+    </script>
 </body>
 
 </html>
