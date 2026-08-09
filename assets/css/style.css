@@ -14322,3 +14322,74 @@ blockquote.vs-quote cite:before {
     margin: 8px 0;
   }
 }
+
+
+/*==============================
+  Recent Gallery carousel arrows
+==============================*/
+.gallery-wrapper {
+  position: relative;
+}
+.gallery-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--white-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: background-color ease 0.3s;
+}
+.gallery-arrow i {
+  font-size: 24px;
+  line-height: 1;
+  color: var(--theme-color);
+  transition: color ease 0.3s;
+}
+.gallery-arrow:hover {
+  background-color: var(--theme-color);
+}
+.gallery-arrow:hover i {
+  color: var(--white-color);
+}
+.gallery-arrow:focus-visible {
+  outline: 2px solid var(--theme-color);
+  outline-offset: 3px;
+}
+.gallery-prev {
+  left: 15px;
+}
+.gallery-next {
+  right: 15px;
+}
+@media (min-width: 1600px) {
+  .gallery-prev {
+    left: -70px;
+  }
+  .gallery-next {
+    right: -70px;
+  }
+}
+@media (max-width: 575px) {
+  .gallery-arrow {
+    width: 40px;
+    height: 40px;
+  }
+  .gallery-arrow i {
+    font-size: 18px;
+  }
+  .gallery-prev {
+    left: 8px;
+  }
+  .gallery-next {
+    right: 8px;
+  }
+}
