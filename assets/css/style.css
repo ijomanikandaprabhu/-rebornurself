@@ -15258,3 +15258,158 @@ blockquote.vs-quote cite:before {
   font-size: 18px;
   vertical-align: -2px;
 }
+
+/*==============================
+  404 page — blinking brow
+==============================*/
+.error-body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 50% 0%, #fdf1ea 0%, var(--white-color) 62%);
+}
+.error-wrap {
+  width: 100%;
+  max-width: 760px;
+  padding: 60px 24px 70px;
+  text-align: center;
+}
+.error-logo {
+  display: inline-block;
+  margin-bottom: 44px;
+}
+.error-logo img {
+  width: 190px;
+  height: auto;
+}
+.error-code {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 30px;
+}
+.error-digit {
+  font-family: "Marcellus", serif;
+  font-size: 150px;
+  line-height: 1;
+  color: var(--title-color);
+}
+.error-eye {
+  width: 190px;
+  height: 150px;
+  overflow: visible;
+}
+.error-eye path,
+.error-eye circle {
+  fill: none;
+  stroke: var(--theme-color);
+  stroke-width: 5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.error-eye .brow-hair,
+.error-eye .eye-lash {
+  stroke-width: 3.5;
+  opacity: 0.75;
+}
+.error-eye .eye-iris {
+  fill: rgba(154, 86, 58, 0.18);
+  stroke-width: 4;
+}
+.error-eye .eye-pupil {
+  fill: var(--title-color);
+  stroke: none;
+}
+.error-eye .eye-glint {
+  fill: var(--white-color);
+  stroke: none;
+}
+
+.error-title {
+  margin-bottom: 14px;
+  font-size: 38px;
+  color: var(--title-color);
+}
+.error-text {
+  max-width: 520px;
+  margin: 0 auto 34px;
+  font-size: 16px;
+  line-height: 1.75;
+  /* --body-color resolves to white in this context, so set it outright */
+  color: #6f6c6c;
+}
+.error-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 44px;
+}
+.error-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 14px 30px;
+  border-radius: 50px;
+  background-color: var(--theme-color);
+  color: var(--white-color);
+  font-size: 15px;
+  font-weight: 500;
+  transition: background-color ease 0.3s, transform ease 0.3s;
+}
+.error-btn:hover {
+  background-color: var(--title-color);
+  color: var(--white-color);
+  transform: translateY(-2px);
+}
+.error-btn-wa {
+  background-color: #25d366;
+}
+.error-btn-wa:hover {
+  background-color: #1da851;
+}
+.error-btn i {
+  font-size: 18px;
+}
+.error-btn:focus-visible {
+  outline: 2px solid var(--title-color);
+  outline-offset: 3px;
+}
+.error-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px 18px;
+  padding-top: 26px;
+  border-top: 1px solid rgba(18, 31, 56, 0.1);
+  font-size: 14px;
+}
+.error-links span {
+  color: #6f6c6c;
+}
+.error-links a {
+  color: var(--theme-color);
+  border-bottom: 1px solid transparent;
+}
+.error-links a:hover {
+  border-bottom-color: var(--theme-color);
+}
+@media (max-width: 575px) {
+  .error-digit {
+    font-size: 92px;
+  }
+  .error-eye {
+    width: 118px;
+    height: 94px;
+  }
+  .error-title {
+    font-size: 27px;
+  }
+  .error-actions .error-btn {
+    flex: 1 1 100%;
+    justify-content: center;
+  }
+}
