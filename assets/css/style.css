@@ -14695,7 +14695,6 @@ blockquote.vs-quote cite:before {
 }
 .form-style11 .select-field select:focus {
   border-color: var(--theme-color);
-  box-shadow: 0 0 0 3px rgba(154, 86, 58, 0.12);
 }
 .form-style11 .select-field-icon {
   position: absolute;
@@ -14729,5 +14728,37 @@ blockquote.vs-quote cite:before {
 .form-style11 input:focus,
 .form-style11 textarea:focus {
   border-color: var(--theme-color);
-  box-shadow: 0 0 0 3px rgba(154, 86, 58, 0.12);
+}
+
+/*==============================
+  Appointment form: autofill + image fit
+==============================*/
+/* Chrome paints a yellow/blue block over autofilled fields. Keep the
+   field looking like every other one. */
+.form-style11 input:-webkit-autofill,
+.form-style11 input:-webkit-autofill:hover,
+.form-style11 input:-webkit-autofill:focus,
+.form-style11 select:-webkit-autofill {
+  -webkit-text-fill-color: var(--title-color);
+  -webkit-box-shadow: 0 0 0 1000px var(--white-color) inset;
+  box-shadow: 0 0 0 1000px var(--white-color) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+/* The photo beside the form stopped short of the form's height, leaving
+   a gap. Fill the column instead. */
+.schedule-box1,
+.schedule-box1 .schedule-img {
+  height: 100%;
+}
+.schedule-box1 .schedule-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+@media (max-width: 991px) {
+  .schedule-box1 .schedule-img img {
+    height: auto;
+    max-height: 480px;
+  }
 }
