@@ -15163,11 +15163,13 @@ blockquote.vs-quote cite:before {
 }
 .vs-carousel .slick-slide {
   height: auto;
+  display: flex;
+  flex-direction: column;
 }
-.vs-carousel .slick-slide > div {
-  height: 100%;
-}
-.vs-carousel .feature-style2,
-.vs-carousel .gallery-style1 {
-  height: 100%;
+/* The card carries a large top margin (the icon hangs above it), so a
+   plain height:100% overflowed the slide and the carousel clipped its
+   bottom edge. Letting it flex-grow fills the slide margins included. */
+.vs-carousel .slick-slide > .feature-style2,
+.vs-carousel .slick-slide > .gallery-style1 {
+  flex: 1 1 auto;
 }
