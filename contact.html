@@ -61,7 +61,7 @@
     <!-- Slick Slider -->
     <link rel="stylesheet" href="assets/css/slick.min.css">
     <!-- Theme Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css?v=20260809t">
+    <link rel="stylesheet" href="assets/css/style.css?v=20260810a">
 
     <script type="application/ld+json">
 {
@@ -359,7 +359,7 @@ Popup Search Box
                             <p class="pe-xxl-4">Tell us what you are hoping to change and we will tell you honestly what is possible. Send a message below, or reach us directly on WhatsApp, phone or email &mdash; whichever you prefer.</p>
                         </div>
                     </div>
-                    <form action="https://formsubmit.co/rebornurself.business@gmail.com" method="POST" class="form-style6">
+                    <form action="https://formsubmit.co/rebornurself.business@gmail.com" method="POST" class="form-style6" id="contactForm">
                         <div class="form-group">
                           <input type="text" name="name" id="name" placeholder="Your Name*" required>
                         </div>
@@ -373,8 +373,9 @@ Popup Search Box
                         <input type="hidden" name="_captcha" value="false">
                         <input type="hidden" name="_template" value="table">
                         <div class="form-group">
+                          <div class="select-field">
                           <select name="selected_service" id="subject" required>
-                            <option selected disabled hidden>Service*</option>
+                            <option selected disabled hidden value="">Service*</option>
                             <option value="Microblading">Microblading</option>
                             <option value="Ombre Powder Brows">Ombre Powder Brows</option>
                             <option value="Combination">Combination</option>
@@ -383,11 +384,14 @@ Popup Search Box
                             <option value="Mole Creation">Mole Creation</option>
                             <option value="Others">Others</option>
                           </select>
+                          <i class="fal fa-angle-down select-field-icon"></i>
+                          </div>
                         </div>
                         <div class="form-group">
                           <textarea name="message" id="message" placeholder="Message*" required></textarea>
                         </div>
                         <button class="vs-btn" type="submit">Send Message</button>
+                        <p class="form-hint">WhatsApp will open with your details ready &mdash; just press send.</p>
                         <p class="form-messages"></p>
                       </form>
                       
@@ -533,9 +537,62 @@ Popup Search Box
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>
     <!-- Main Js File -->
-    <script src="assets/js/main.js?v=20260809t"></script>
+    <script src="assets/js/main.js?v=20260810a"></script>
 
 
+    <script>
+        (function () {
+            var form = document.getElementById('contactForm');
+            if (!form) return;
+
+            // Grey the select until a real option is chosen.
+            Array.prototype.forEach.call(form.querySelectorAll('.select-field select'), function (sel) {
+                var sync = function () {
+                    var opt = sel.options[sel.selectedIndex];
+                    sel.classList.toggle('is-placeholder', !opt || opt.disabled);
+                };
+                sel.addEventListener('change', sync);
+                sync();
+            });
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                var val = function (name) {
+                    var el = form.querySelector('[name="' + name + '"]');
+                    if (!el) return '';
+                    if (el.tagName === 'SELECT') {
+                        var opt = el.options[el.selectedIndex];
+                        if (!opt || opt.disabled) return '';
+                    }
+                    return el.value ? el.value.trim() : '';
+                };
+                var lines = ['Hi Rebornurself, I have an enquiry.', ''];
+                var add = function (label, field) {
+                    var v = val(field);
+                    if (v) lines.push(label + ': ' + v);
+                };
+                add('Name', 'name');
+                add('Email', 'email');
+                add('Phone', 'number');
+                add('Service', 'selected_service');
+                var msg = val('message');
+                if (msg) { lines.push(''); lines.push(msg); }
+
+                // Email the studio a copy first, so the enquiry is never lost if
+                // the visitor does not press send inside WhatsApp.
+                try {
+                    var data = new FormData(form);
+                    data.append('_subject', 'Contact enquiry from the website');
+                    if (window.fetch) {
+                        fetch(form.action, { method: 'POST', body: data, mode: 'no-cors' });
+                    }
+                } catch (err) { /* emailing is a backup; never block WhatsApp */ }
+
+                window.location.href = 'https://wa.me/918090111911?text=' +
+                    encodeURIComponent(lines.join('\n'));
+            });
+        })();
+    </script>
 </body>
 
 </html>

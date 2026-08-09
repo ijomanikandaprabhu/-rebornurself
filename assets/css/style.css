@@ -14762,3 +14762,55 @@ blockquote.vs-quote cite:before {
     max-height: 480px;
   }
 }
+
+/*==============================
+  Contact form: styled select + hint
+  (mirrors the appointment form)
+==============================*/
+.form-style6 .select-field {
+  position: relative;
+}
+.form-style6 .select-field select {
+  width: 100%;
+  padding-right: 52px;
+  background-image: none;
+  color: var(--title-color);
+  cursor: pointer;
+  transition: border-color ease 0.3s;
+}
+.form-style6 .select-field select.is-placeholder {
+  color: var(--body-color);
+}
+.form-style6 .select-field select:hover,
+.form-style6 input:hover,
+.form-style6 textarea:hover {
+  border-color: rgba(154, 86, 58, 0.35);
+}
+.form-style6 .select-field select:focus,
+.form-style6 input:focus,
+.form-style6 textarea:focus {
+  border-color: var(--theme-color);
+}
+.form-style6 .select-field-icon {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  color: var(--theme-color);
+  font-size: 18px;
+  pointer-events: none;
+}
+.form-style6 .form-hint {
+  margin: 14px 0 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--body-color);
+}
+.form-style6 input:-webkit-autofill,
+.form-style6 input:-webkit-autofill:hover,
+.form-style6 input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--title-color);
+  -webkit-box-shadow: 0 0 0 1000px var(--white-color) inset;
+  box-shadow: 0 0 0 1000px var(--white-color) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
