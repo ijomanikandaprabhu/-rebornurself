@@ -14972,3 +14972,55 @@ blockquote.vs-quote cite:before {
     justify-content: center;
   }
 }
+
+/*==============================
+  Before You Visit panel
+==============================*/
+.visit-panel {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: var(--secondary-color);
+}
+.visit-item {
+  padding: 46px 44px;
+}
+.visit-item + .visit-item {
+  border-left: 1px solid rgba(18, 31, 56, 0.08);
+}
+.visit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  margin-bottom: 20px;
+  border-radius: 50%;
+  background-color: var(--white-color);
+  color: var(--theme-color);
+  font-size: 22px;
+}
+.visit-title {
+  margin-bottom: 12px;
+  font-size: 22px;
+  color: var(--title-color);
+}
+.visit-item p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.73;
+}
+@media (max-width: 767px) {
+  .visit-panel {
+    grid-template-columns: 1fr;
+  }
+  .visit-item {
+    padding: 34px 26px;
+  }
+  .visit-item + .visit-item {
+    border-left: none;
+    border-top: 1px solid rgba(18, 31, 56, 0.08);
+  }
+}
