@@ -14553,3 +14553,59 @@ blockquote.vs-quote cite:before {
     font-size: 18px;
   }
 }
+
+/*==============================
+  Info cards (booking / studio details)
+==============================*/
+.booking-info .info-card {
+  height: 100%;
+  padding: 30px;
+  border: 1px solid rgba(18, 31, 56, 0.07);
+  border-radius: 8px;
+  background-color: var(--white-color);
+  box-shadow: 0 6px 24px rgba(18, 31, 56, 0.05);
+  transition: transform ease 0.3s, box-shadow ease 0.3s;
+}
+.booking-info .info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(18, 31, 56, 0.1);
+}
+.booking-info .info-card-title {
+  margin-bottom: 12px;
+  font-size: 19px;
+  line-height: 1.4;
+  color: var(--title-color);
+}
+.booking-info .info-card p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.73;
+}
+.booking-info .info-card a {
+  color: var(--theme-color);
+  font-weight: 500;
+}
+.booking-info .info-card a:hover {
+  text-decoration: underline;
+}
+.booking-info .info-note {
+  margin-top: 40px;
+  padding: 26px 24px;
+  border-radius: 8px;
+  background-color: var(--smoke-color);
+}
+.booking-info .info-note a {
+  color: var(--theme-color);
+  font-weight: 500;
+}
+.booking-info .info-note a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 575px) {
+  .booking-info .info-card {
+    padding: 24px 20px;
+  }
+  .booking-info .info-card-title {
+    font-size: 17px;
+  }
+}
