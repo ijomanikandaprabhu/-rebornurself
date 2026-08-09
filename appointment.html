@@ -61,7 +61,7 @@
     <!-- Slick Slider -->
     <link rel="stylesheet" href="assets/css/slick.min.css">
     <!-- Theme Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css?v=20260809k">
+    <link rel="stylesheet" href="assets/css/style.css?v=20260809n">
 
     <script type="application/ld+json">
 {
@@ -394,6 +394,7 @@ Popup Search Box
                               </div>
                               <div class="from-btn">
                                   <button type="submit" class="vs-btn style7">Make Appointment</button>
+                                  <p class="form-hint">WhatsApp will open with your details ready &mdash; just press send to confirm.</p>
                               </div>
                           </div>
                       </form>
@@ -610,7 +611,7 @@ Popup Search Box
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>
     <!-- Main Js File -->
-    <script src="assets/js/main.js?v=20260809k"></script>
+    <script src="assets/js/main.js?v=20260809n"></script>
 
 
     <script>
@@ -621,7 +622,14 @@ Popup Search Box
                 e.preventDefault();
                 var val = function (name) {
                     var el = form.querySelector('[name="' + name + '"]');
-                    return el && el.value ? el.value.trim() : '';
+                    if (!el) return '';
+                    // Selects carry a disabled placeholder option whose text would
+                    // otherwise be sent as if it were a real answer.
+                    if (el.tagName === 'SELECT') {
+                        var opt = el.options[el.selectedIndex];
+                        if (!opt || opt.disabled) return '';
+                    }
+                    return el.value ? el.value.trim() : '';
                 };
                 var lines = ['Hi Rebornurself, I would like to book an appointment.', ''];
                 var first = val('First Name'), last = val('Last Name');
@@ -637,8 +645,25 @@ Popup Search Box
                 add('Service', 'Selected Services');
                 var msg = val('Message');
                 if (msg) { lines.push(''); lines.push(msg); }
-                window.open('https://wa.me/918090111911?text=' +
-                    encodeURIComponent(lines.join('\n')), '_blank', 'noopener');
+
+                // Email the studio a copy first, so the enquiry is never lost if
+                // the visitor does not press send inside WhatsApp.
+                try {
+                    var data = new FormData(form);
+                    data.append('_subject', 'Appointment enquiry from the website');
+                    if (window.fetch) {
+                        fetch(form.action, {
+                            method: 'POST',
+                            body: data,
+                            mode: 'no-cors'
+                        });
+                    }
+                } catch (err) { /* emailing is a backup; never block WhatsApp */ }
+
+                // Navigate rather than window.open: popup blockers silently drop
+                // window.open on mobile, which made the button appear to do nothing.
+                window.location.href = 'https://wa.me/918090111911?text=' +
+                    encodeURIComponent(lines.join('\n'));
             });
         })();
     </script>

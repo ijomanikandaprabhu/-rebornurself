@@ -14657,3 +14657,13 @@ blockquote.vs-quote cite:before {
     display: none;
   }
 }
+
+/*==============================
+  Appointment form hint
+==============================*/
+.form-style11 .form-hint {
+  margin: 14px 0 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--body-color);
+}
