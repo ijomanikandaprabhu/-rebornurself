@@ -14278,3 +14278,47 @@ blockquote.vs-quote cite:before {
     right: 10px !important;
   }
 }
+
+
+/*==============================
+  Footer contact & social  (footer-layout2)
+==============================*/
+.footer-layout2 .footer-contact {
+  margin-bottom: 22px;
+}
+.footer-layout2 .footer-contact a {
+  display: inline-block;
+  margin: 4px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--white-color);
+  transition: color ease 0.4s;
+}
+.footer-layout2 .footer-contact a i {
+  margin-right: 8px;
+  color: var(--theme-color);
+}
+.footer-layout2 .footer-contact a:hover {
+  color: var(--theme-color);
+}
+.footer-layout2 .footer-social {
+  --icon-size: 40px;
+  margin-bottom: 26px;
+}
+.footer-layout2 .footer-social a {
+  font-size: 14px;
+  margin: 0 4px;
+  color: var(--white-color);
+  border-color: rgba(255, 255, 255, 0.25);
+}
+.footer-layout2 .footer-social a:hover {
+  color: var(--white-color);
+  background-color: var(--theme-color);
+  border-color: var(--theme-color);
+}
+@media (max-width: 575px) {
+  .footer-layout2 .footer-contact a {
+    display: block;
+    margin: 8px 0;
+  }
+}
