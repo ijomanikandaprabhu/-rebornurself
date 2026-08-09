@@ -14667,3 +14667,67 @@ blockquote.vs-quote cite:before {
   line-height: 1.6;
   color: var(--body-color);
 }
+
+/*==============================
+  Appointment form select field
+==============================*/
+.form-style11 .select-field {
+  position: relative;
+}
+.form-style11 .select-field select {
+  width: 100%;
+  height: 55px;
+  padding: 0 52px 0 30px;
+  border: 1px solid transparent;
+  border-radius: 0;
+  background-color: var(--white-color);
+  background-image: none;
+  color: var(--title-color);
+  font-size: 16px;
+  cursor: pointer;
+  transition: border-color ease 0.3s, box-shadow ease 0.3s;
+}
+.form-style11 .select-field select.is-placeholder {
+  color: var(--body-color);
+}
+.form-style11 .select-field select:hover {
+  border-color: rgba(154, 86, 58, 0.35);
+}
+.form-style11 .select-field select:focus {
+  border-color: var(--theme-color);
+  box-shadow: 0 0 0 3px rgba(154, 86, 58, 0.12);
+}
+.form-style11 .select-field-icon {
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  transform: translateY(-50%);
+  color: var(--theme-color);
+  font-size: 18px;
+  pointer-events: none;
+  transition: transform ease 0.3s;
+}
+.form-style11 .select-field:hover .select-field-icon {
+  transform: translateY(-50%) translateY(1px);
+}
+.form-style11 .select-field select option {
+  color: var(--title-color);
+}
+.form-style11 textarea {
+  padding: 18px 30px;
+  border: 1px solid transparent;
+  transition: border-color ease 0.3s, box-shadow ease 0.3s;
+}
+.form-style11 textarea:hover,
+.form-style11 input:hover {
+  border-color: rgba(154, 86, 58, 0.35);
+}
+.form-style11 input {
+  border: 1px solid transparent;
+  transition: border-color ease 0.3s, box-shadow ease 0.3s;
+}
+.form-style11 input:focus,
+.form-style11 textarea:focus {
+  border-color: var(--theme-color);
+  box-shadow: 0 0 0 3px rgba(154, 86, 58, 0.12);
+}
