@@ -14393,3 +14393,23 @@ blockquote.vs-quote cite:before {
     right: 8px;
   }
 }
+
+/*==============================
+  Recent Gallery uniform tiles
+  Thumbnails share one 4:3 frame; the lightbox still opens the
+  full-size original, which is untouched.
+==============================*/
+.gallery-style1 .gallery-img {
+  aspect-ratio: 4 / 3;
+}
+.gallery-style1 .gallery-img > a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.gallery-style1 .gallery-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
