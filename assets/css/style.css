@@ -14814,3 +14814,20 @@ blockquote.vs-quote cite:before {
   box-shadow: 0 0 0 1000px var(--white-color) inset;
   transition: background-color 5000s ease-in-out 0s;
 }
+
+/*==============================
+  Contact page: studio location block
+==============================*/
+.contact-location .contact-map iframe {
+  width: 100%;
+  height: 420px;
+  display: block;
+}
+@media (max-width: 991px) {
+  .contact-location .contact-map {
+    margin-bottom: 30px;
+  }
+  .contact-location .contact-map iframe {
+    height: 320px;
+  }
+}
