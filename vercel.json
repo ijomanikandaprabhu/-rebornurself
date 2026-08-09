@@ -68,5 +68,12 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/appointment.html",
+      "destination": "/contact.html",
+      "permanent": true
+    }
   ]
 }
