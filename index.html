@@ -61,7 +61,7 @@
     <!-- Slick Slider -->
     <link rel="stylesheet" href="assets/css/slick.min.css">
     <!-- Theme Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css?v=20260811d">
+    <link rel="stylesheet" href="assets/css/style.css?v=20260811k">
 
     <script type="application/ld+json">
 {
@@ -188,6 +188,9 @@
                         <a href="about.html">About Us</a>
                     </li>
                     <li>
+                        <a href="gallery.html">Gallery</a>
+                    </li>
+                    <li>
                         <a href="contact.html">Contact Us</a>
                     </li>
                 </ul>
@@ -308,6 +311,9 @@ Popup Search Box
                                     </li>
                                     <li>
                                         <a href="about.html">About Us</a>
+                                    </li>
+                                    <li>
+                                        <a href="gallery.html">Gallery</a>
                                     </li>
                                     <li>
                                         <a href="contact.html">Contact Us</a>
@@ -1154,79 +1160,113 @@ Popup Search Box
     <!--==============================
     Gallery Area
     ==============================-->
-    <section class="space-top space-extra-bottom">
+    <section class="space-top space-extra-bottom gal-section">
         <div class="container">
             <div class="title-area text-center wow fadeInUp" data-wow-delay="0.2s">
                 <span class="sec-subtitle">Our Work</span>
                 <h2 class="sec-title">Recent Gallery</h2>
                 <div class="sec-shape"><img src="assets/img/shape/sec-shape-1.png" alt="shape"></div>
             </div>
-            <div class="gallery-wrapper">
-                <!-- Previous Arrow -->
-                                <button type="button" class="gallery-arrow gallery-prev" aria-label="Previous gallery images">
-                    <i class="fal fa-angle-left"></i>
-                </button>
-
-                <!-- Gallery Grid -->
-                <div class="row vs-carousel wow fadeInUp" data-wow-delay="0.3s" data-slide-show="3"
-                    data-md-slide-show="2" data-arrows="false">
-                    <div class="col-xl-4">
-                        <div class="gallery-style1">
-                            <div class="gallery-img">
-                                <a href="assets/img/WhatsApp Image 2026-02-05 at 22.58.37.jpeg" class="popup-image">
-                                    <img src="assets/img/WhatsApp Image 2026-02-05 at 22.58.37.jpeg" alt="Gallery Image"
-                                        class="w-100">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4">
-                        <div class="gallery-style1">
-                            <div class="gallery-img">
-                                <a href="assets/img/WhatsApp Image 2026-02-05 at 22.58.39.jpeg" class="popup-image">
-                                    <img src="assets/img/WhatsApp Image 2026-02-05 at 22.58.39.jpeg" alt="Gallery Image"
-                                        class="w-100">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4">
-                        <div class="gallery-style1">
-                            <div class="gallery-img">
-                                <a href="assets/img/WhatsApp Image 2026-02-05 at 22.58.41.jpeg" class="popup-image">
-                                    <img src="assets/img/WhatsApp Image 2026-02-05 at 22.58.41.jpeg" alt="Gallery Image"
-                                        class="w-100">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4">
-                        <div class="gallery-style1">
-                            <div class="gallery-img">
-                                <a href="assets/img/WhatsApp Image 2026-02-05 at 22.58.43.jpeg" class="popup-image">
-                                    <img src="assets/img/WhatsApp Image 2026-02-05 at 22.58.43.jpeg" alt="Gallery Image"
-                                        class="w-100">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4">
-                        <div class="gallery-style1">
-                            <div class="gallery-img">
-                                <a href="assets/img/WhatsApp Image 2026-02-05 at 22.58.44.jpeg" class="popup-image">
-                                    <img src="assets/img/WhatsApp Image 2026-02-05 at 22.58.44.jpeg" alt="Gallery Image"
-                                        class="w-100">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Next Arrow -->
-                                <button type="button" class="gallery-arrow gallery-next" aria-label="Next gallery images">
-                    <i class="fal fa-angle-right"></i>
-                </button>
+            <div class="gal-filter" role="group" aria-label="Filter the gallery by treatment">
+                    <button type="button" class="gal-tab is-active" data-filter="all" aria-pressed="true">All</button>
+                    <button type="button" class="gal-tab" data-filter="microblading" aria-pressed="false">Microblading</button>
+                    <button type="button" class="gal-tab" data-filter="ombre" aria-pressed="false">Ombre Powder Brows</button>
+                    <button type="button" class="gal-tab" data-filter="combination" aria-pressed="false">Combination Brows</button>
+                    <button type="button" class="gal-tab" data-filter="neutralization" aria-pressed="false">Lip Neutralization</button>
+                    <button type="button" class="gal-tab" data-filter="blushing" aria-pressed="false">Lip Blushing</button>
+                    <button type="button" class="gal-tab" data-filter="beauty-spot" aria-pressed="false">Beauty Spot</button>
+                    <button type="button" class="gal-tab" data-filter="events" aria-pressed="false">Events</button>
             </div>
+            <div class="gal-grid">
+                <div class="gal-cell" data-cat="microblading">
+                    <a href="assets/img/gallery/microblading-1.jpg" class="popup-image">
+                        <img src="assets/img/gallery/microblading-1.jpg" alt="Microblading before, during and healed result" loading="lazy">
+                        <span class="gal-zoom"><i class="fal fa-search-plus"></i></span>
+                    </a>
+                </div>
+                <div class="gal-cell" data-cat="ombre">
+                    <a href="assets/img/gallery/ombre-1.jpg" class="popup-image">
+                        <img src="assets/img/gallery/ombre-1.jpg" alt="Ombre powder brows before and after" loading="lazy">
+                        <span class="gal-zoom"><i class="fal fa-search-plus"></i></span>
+                    </a>
+                </div>
+                <div class="gal-cell" data-cat="ombre">
+                    <a href="assets/img/gallery/ombre-2.jpg" class="popup-image">
+                        <img src="assets/img/gallery/ombre-2.jpg" alt="Powder brows result with before inset" loading="lazy">
+                        <span class="gal-zoom"><i class="fal fa-search-plus"></i></span>
+                    </a>
+                </div>
+                <div class="gal-cell" data-cat="ombre">
+                    <a href="assets/img/gallery/ombre-3.jpg" class="popup-image">
+                        <img src="assets/img/gallery/ombre-3.jpg" alt="Soft ombre brows before and after" loading="lazy">
+                        <span class="gal-zoom"><i class="fal fa-search-plus"></i></span>
+                    </a>
+                </div>
+                <div class="gal-cell" data-cat="neutralization">
+                    <a href="assets/img/gallery/neutralization-1.jpg" class="popup-image">
+                        <img src="assets/img/gallery/neutralization-1.jpg" alt="Lip neutralization for men, before and after" loading="lazy">
+                        <span class="gal-zoom"><i class="fal fa-search-plus"></i></span>
+                    </a>
+                </div>
+                <div class="gal-cell" data-cat="blushing">
+                    <a href="assets/img/gallery/blushing-1.jpg" class="popup-image">
+                        <img src="assets/img/gallery/blushing-1.jpg" alt="Lip blushing before and after" loading="lazy">
+                        <span class="gal-zoom"><i class="fal fa-search-plus"></i></span>
+                    </a>
+                </div>
+                <div class="gal-cell" data-cat="events">
+                    <a href="assets/img/gallery/event-1.jpg" class="popup-image">
+                        <img src="assets/img/gallery/event-1.jpg" alt="Sandhiya Srinivasan at a beauty industry event" loading="lazy">
+                        <span class="gal-zoom"><i class="fal fa-search-plus"></i></span>
+                    </a>
+                </div>
+                <div class="gal-cell" data-cat="events">
+                    <a href="assets/img/gallery/event-2.jpg" class="popup-image">
+                        <img src="assets/img/gallery/event-2.jpg" alt="Sandhiya Srinivasan at a beauty industry event" loading="lazy">
+                        <span class="gal-zoom"><i class="fal fa-search-plus"></i></span>
+                    </a>
+                </div>
+                <div class="gal-cell" data-cat="events">
+                    <a href="assets/img/gallery/event-3.jpg" class="popup-image">
+                        <img src="assets/img/gallery/event-3.jpg" alt="Sandhiya Srinivasan at a beauty industry event" loading="lazy">
+                        <span class="gal-zoom"><i class="fal fa-search-plus"></i></span>
+                    </a>
+                </div>
+                <div class="gal-cell" data-cat="events">
+                    <a href="assets/img/WhatsApp Image 2026-02-05 at 22.58.37.jpeg" class="popup-image">
+                        <img src="assets/img/WhatsApp Image 2026-02-05 at 22.58.37.jpeg" alt="Client at the Rebornurself studio" loading="lazy">
+                        <span class="gal-zoom"><i class="fal fa-search-plus"></i></span>
+                    </a>
+                </div>
+                <div class="gal-cell" data-cat="events">
+                    <a href="assets/img/WhatsApp Image 2026-02-05 at 22.58.39.jpeg" class="popup-image">
+                        <img src="assets/img/WhatsApp Image 2026-02-05 at 22.58.39.jpeg" alt="Certificate presentation at Rebornurself" loading="lazy">
+                        <span class="gal-zoom"><i class="fal fa-search-plus"></i></span>
+                    </a>
+                </div>
+                <div class="gal-cell" data-cat="events">
+                    <a href="assets/img/WhatsApp Image 2026-02-05 at 22.58.41.jpeg" class="popup-image">
+                        <img src="assets/img/WhatsApp Image 2026-02-05 at 22.58.41.jpeg" alt="Microblading training session group photo" loading="lazy">
+                        <span class="gal-zoom"><i class="fal fa-search-plus"></i></span>
+                    </a>
+                </div>
+                <div class="gal-cell" data-cat="events">
+                    <a href="assets/img/WhatsApp Image 2026-02-05 at 22.58.43.jpeg" class="popup-image">
+                        <img src="assets/img/WhatsApp Image 2026-02-05 at 22.58.43.jpeg" alt="Certificate presentation at Rebornurself" loading="lazy">
+                        <span class="gal-zoom"><i class="fal fa-search-plus"></i></span>
+                    </a>
+                </div>
+                <div class="gal-cell" data-cat="events">
+                    <a href="assets/img/WhatsApp Image 2026-02-05 at 22.58.44.jpeg" class="popup-image">
+                        <img src="assets/img/WhatsApp Image 2026-02-05 at 22.58.44.jpeg" alt="Rebornurself training group" loading="lazy">
+                        <span class="gal-zoom"><i class="fal fa-search-plus"></i></span>
+                    </a>
+                </div>
+            </div>
+            <div class="gal-more text-center">
+                <a href="gallery.html" class="gal-more-btn">View More<i class="fal fa-arrow-right"></i></a>
+            </div>
+            <p class="gal-empty" hidden>No photos in this category yet &mdash; <a href="https://wa.me/918090111911?text=Hi%20Rebornurself%2C%20do%20you%20have%20photos%20of%20this%20treatment%3F" target="_blank" rel="noopener">ask us on WhatsApp</a> and we will share our latest work.</p>
         </div>
     </section>
 
@@ -1319,7 +1359,7 @@ Popup Search Box
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>
     <!-- Main Js File -->
-    <script src="assets/js/main.js?v=20260811d"></script>
+    <script src="assets/js/main.js?v=20260811k"></script>
 
 
     <script>
@@ -1340,6 +1380,49 @@ Popup Search Box
                         }
                     });
                 });
+            });
+        })();
+    </script>
+    <script>
+        (function () {
+            var bar = document.querySelector('.gal-filter');
+            if (!bar) return;
+
+            // Magnific Popup binds its gallery handler per element; with the
+            // grid it needs to delegate from the container, or clicking a
+            // thumbnail does nothing. Rebind it here.
+            if (window.jQuery && jQuery.fn.magnificPopup) {
+                jQuery('.gal-cell a.popup-image').off('click.magnificPopup');
+                jQuery('.gal-grid').magnificPopup({
+                    delegate: '.gal-cell:not([hidden]) a.popup-image',
+                    type: 'image',
+                    gallery: { enabled: true }
+                });
+            }
+            var cells = [].slice.call(document.querySelectorAll('.gal-cell'));
+            var empty = document.querySelector('.gal-empty');
+            // cap the home page at two rows
+            cells.forEach(function (c, i) { if (i >= 6) c.setAttribute('hidden', ''); });
+            bar.addEventListener('click', function (e) {
+                var btn = e.target.closest('.gal-tab');
+                if (!btn) return;
+                var want = btn.getAttribute('data-filter');
+                [].forEach.call(bar.querySelectorAll('.gal-tab'), function (t) {
+                    var on = t === btn;
+                    t.classList.toggle('is-active', on);
+                    t.setAttribute('aria-pressed', on ? 'true' : 'false');
+                });
+                var shown = 0, LIMIT = 6;
+                cells.forEach(function (c) {
+                    var match = want === 'all' || c.getAttribute('data-cat') === want;
+                    // only the first two rows are shown here; the rest live on gallery.html
+                    if (match && shown < LIMIT) { c.removeAttribute('hidden'); shown++; }
+                    else { c.setAttribute('hidden', ''); }
+                });
+                if (empty) {
+                    if (shown) empty.setAttribute('hidden', '');
+                    else empty.removeAttribute('hidden');
+                }
             });
         })();
     </script>
