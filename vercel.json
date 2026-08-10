@@ -34,12 +34,6 @@
       "use": "@vercel/static"
     }
   ],
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/$1"
-    }
-  ],
   "headers": [
     {
       "source": "/assets/(.*)\\.(jpg|jpeg|png|gif|svg|webp|ico|woff|woff2|ttf|eot)",
