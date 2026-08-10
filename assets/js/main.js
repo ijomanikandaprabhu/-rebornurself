@@ -898,3 +898,57 @@
     $(this).siblings('.vs-carousel').slick('slickNext');
   });
 
+
+/*----------- Your Journey: reveal each step on scroll ----------*/
+(function () {
+  var timeline = document.querySelector('.journey-timeline');
+  if (!timeline) return;
+
+  var steps = [].slice.call(timeline.querySelectorAll('.journey-step'));
+  if (!steps.length) return;
+
+  var reduced = window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // No observer support, or the visitor prefers less motion: show everything.
+  if (reduced || !('IntersectionObserver' in window)) {
+    steps.forEach(function (s) { s.classList.add('is-revealed'); });
+    timeline.classList.add('is-revealed');
+    return;
+  }
+
+  timeline.classList.add('js-reveal');
+
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('is-revealed');
+      io.unobserve(entry.target);
+    });
+  }, { threshold: 0.25, rootMargin: '0px 0px -10% 0px' });
+
+  steps.forEach(function (s) { io.observe(s); });
+
+  // the centre line fills as the section scrolls past
+  var fill = document.createElement('span');
+  fill.className = 'journey-progress';
+  timeline.appendChild(fill);
+
+  var ticking = false;
+  function draw() {
+    ticking = false;
+    var box = timeline.getBoundingClientRect();
+    var start = window.innerHeight * 0.8;
+    var travelled = start - box.top;
+    var pct = Math.max(0, Math.min(1, travelled / box.height));
+    fill.style.height = (pct * 100) + '%';
+  }
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(draw);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
+  draw();
+})();
