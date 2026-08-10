@@ -61,7 +61,7 @@
     <!-- Slick Slider -->
     <link rel="stylesheet" href="assets/css/slick.min.css">
     <!-- Theme Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css?v=20260814c">
+    <link rel="stylesheet" href="assets/css/style.css?v=20260814f">
 
     <script type="application/ld+json">
 {
@@ -99,46 +99,59 @@
   ==============================-->
     <div class="preloader  ">
         <div class="preloader-inner">
-            <svg class="loader-eye" viewBox="0 0 190 150" xmlns="http://www.w3.org/2000/svg"
+            <svg class="loader-eye" viewBox="0 0 360 165" xmlns="http://www.w3.org/2000/svg"
                 role="img" aria-label="Loading">
-                <!-- brow: lifts as the eye closes -->
-                <g transform="translate(95,40)">
-                    <g>
-                        <animateTransform attributeName="transform" type="translate"
-                            values="0 0; 0 0; 0 6; 0 -3; 0 0" keyTimes="0; 0.6; 0.72; 0.84; 1"
-                            dur="1.9s" calcMode="spline"
-                            keySplines=".4 0 .6 1; .4 0 .6 1; .4 0 .6 1; .4 0 .6 1"
-                            repeatCount="indefinite" />
-                        <g transform="translate(-95,-40)">
-                            <path d="M28 44 C58 12, 132 12, 162 40" />
-                            <path class="brow-hair" d="M44 36 C50 27, 54 25, 60 22" />
-                            <path class="brow-hair" d="M60 27 C66 19, 72 17, 78 15" />
-                            <path class="brow-hair" d="M78 22 C86 15, 92 14, 99 14" />
-                            <path class="brow-hair" d="M99 17 C107 15, 114 16, 120 18" />
-                            <path class="brow-hair" d="M120 22 C128 20, 134 23, 140 27" />
-                        </g>
-                    </g>
+                <!-- left eye: mirrored so the wing flicks outward, stays open -->
+                <g transform="translate(100,50) scale(-1,1)">
+                    <path d="M-48 8 C-26 -13, 22 -17, 48 3" />
+                            <path class="brow-hair" d="M-36 4 C-32 -4, -28 -7, -22 -10" />
+                            <path class="brow-hair" d="M-19 -5 C-13 -12, -7 -14, 0 -15" />
+                            <path class="brow-hair" d="M3 -10 C11 -14, 17 -14, 23 -12" />
+                            <path class="brow-hair" d="M26 -7 C34 -7, 40 -4, 46 0" />
+                </g>
+                <g transform="translate(100,108) scale(-1,1)">
+                    <path class="eye-shadow" d="M-52 -10 C-28 -44, 34 -44, 68 -12 C38 -32, -22 -34, -52 -10 Z" />
+                            <circle class="eye-iris" cx="2" cy="-2" r="19" />
+                            <circle class="eye-pupil" cx="2" cy="-2" r="8" />
+                            <circle class="eye-glint" cx="9" cy="-10" r="4" />
+                            <path class="eye-outline" d="M-58 -2 C-30 28, 32 28, 60 0" />
+                            <path class="eye-liner" d="M-58 -2 C-32 -38, 32 -38, 60 0 L86 -20 C70 -11, 44 -27, 12 -34 C-16 -40, -38 -23, -58 -2 Z" />
+                            <path class="eye-lash" d="M30 -33 L40 -49" />
+                            <path class="eye-lash" d="M46 -27 L60 -41" />
+                            <path class="eye-lash" d="M59 -18 L75 -30" />
                 </g>
 
-                <!-- eye: squashes shut, then opens -->
-                <g transform="translate(95,96)">
+                <!-- right eye: winks once -->
+                <g transform="translate(260,50)">
+                    <g>
+                        <animateTransform attributeName="transform" type="translate"
+                            values="0 0; 0 0; 0 5; 0 -4; 0 0; 0 0" keyTimes="0; 0.22; 0.44; 0.66; 0.86; 1"
+                            dur="1.3s" calcMode="spline"
+                            keySplines=".4 0 .6 1; .4 0 .6 1; .4 0 .6 1; .4 0 .6 1; .4 0 .6 1"
+                            repeatCount="1" fill="freeze" />
+                        <path d="M-48 8 C-26 -13, 22 -17, 48 3" />
+                            <path class="brow-hair" d="M-36 4 C-32 -4, -28 -7, -22 -10" />
+                            <path class="brow-hair" d="M-19 -5 C-13 -12, -7 -14, 0 -15" />
+                            <path class="brow-hair" d="M3 -10 C11 -14, 17 -14, 23 -12" />
+                            <path class="brow-hair" d="M26 -7 C34 -7, 40 -4, 46 0" />
+                    </g>
+                </g>
+                <g transform="translate(260,108)">
                     <g>
                         <animateTransform attributeName="transform" type="scale"
-                            values="1 1; 1 1; 1 0.06; 1 1" keyTimes="0; 0.64; 0.72; 1"
-                            dur="1.9s" calcMode="spline"
-                            keySplines=".4 0 .6 1; .4 0 .6 1; .4 0 .6 1"
-                            repeatCount="indefinite" />
-                        <g transform="translate(-95,-96)">
-                            <path class="eye-outline" d="M20 96 C56 56, 134 56, 170 96 C134 136, 56 136, 20 96 Z" />
-                            <circle class="eye-iris" cx="95" cy="96" r="22" />
-                            <circle class="eye-pupil" cx="95" cy="96" r="9" />
-                            <circle class="eye-glint" cx="103" cy="88" r="4" />
-                            <path class="eye-lash" d="M36 74 L26 64" />
-                            <path class="eye-lash" d="M60 62 L54 50" />
-                            <path class="eye-lash" d="M95 57 L95 44" />
-                            <path class="eye-lash" d="M130 62 L136 50" />
-                            <path class="eye-lash" d="M154 74 L164 64" />
-                        </g>
+                            values="1 1; 1 1; 1 0.05; 1 1; 1 1" keyTimes="0; 0.24; 0.44; 0.74; 1"
+                            dur="1.3s" calcMode="spline"
+                            keySplines=".4 0 .6 1; .4 0 .6 1; .4 0 .6 1; .4 0 .6 1"
+                            repeatCount="1" fill="freeze" />
+                        <path class="eye-shadow" d="M-52 -10 C-28 -44, 34 -44, 68 -12 C38 -32, -22 -34, -52 -10 Z" />
+                            <circle class="eye-iris" cx="2" cy="-2" r="19" />
+                            <circle class="eye-pupil" cx="2" cy="-2" r="8" />
+                            <circle class="eye-glint" cx="9" cy="-10" r="4" />
+                            <path class="eye-outline" d="M-58 -2 C-30 28, 32 28, 60 0" />
+                            <path class="eye-liner" d="M-58 -2 C-32 -38, 32 -38, 60 0 L86 -20 C70 -11, 44 -27, 12 -34 C-16 -40, -38 -23, -58 -2 Z" />
+                            <path class="eye-lash" d="M30 -33 L40 -49" />
+                            <path class="eye-lash" d="M46 -27 L60 -41" />
+                            <path class="eye-lash" d="M59 -18 L75 -30" />
                     </g>
                 </g>
             </svg>
@@ -582,7 +595,7 @@ Popup Search Box
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
     <script src="assets/js/isotope.pkgd.min.js"></script>
     <!-- Main Js File -->
-    <script src="assets/js/main.js?v=20260812d"></script>
+    <script src="assets/js/main.js?v=20260814c"></script>
 
 
 </body>

@@ -16031,8 +16031,8 @@ blockquote.vs-quote cite:before {
 /*------------------- 4.33. Preloader eye -------------------*/
 .loader-eye {
     display: block;
-    width: 148px;
-    height: 117px;
+    width: 236px;
+    height: 108px;
     margin: 0 auto;
     overflow: visible;
 }
@@ -16067,9 +16067,19 @@ blockquote.vs-quote cite:before {
     stroke: none;
 }
 
+.loader-eye .eye-liner {
+    fill: var(--theme-color);
+    stroke: none;
+}
+
+.loader-eye .eye-shadow {
+    fill: rgba(154, 86, 58, 0.13);
+    stroke: none;
+}
+
 @media (max-width: 575px) {
     .loader-eye {
-        width: 118px;
-        height: 93px;
+        width: 188px;
+        height: 86px;
     }
 }

@@ -34,7 +34,25 @@
 
   /*---------- 01. On Load Function ----------*/
   $(window).on("load", function () {
-    $(".preloader").fadeOut();
+    var $preloader = $(".preloader");
+    var eye = document.querySelector(".loader-eye");
+    var BLINK_MS = 1300;
+
+    function reveal() {
+      $preloader.fadeOut(450);
+    }
+
+    // No eye, or motion paused for prefers-reduced-motion: don't stall.
+    if (!eye || typeof eye.getCurrentTime !== "function" ||
+        (eye.animationsPaused && eye.animationsPaused())) {
+      reveal();
+      return;
+    }
+
+    // Let the single blink play out, but never re-wait time already spent
+    // loading - a slow page has already shown the whole blink.
+    var elapsed = eye.getCurrentTime() * 1000;
+    setTimeout(reveal, Math.max(0, BLINK_MS - elapsed));
   });
 
   /*---------- 02. Preloader ----------*/
