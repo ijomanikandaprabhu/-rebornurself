@@ -65,7 +65,7 @@
     <!-- Slick Slider -->
     <link rel="stylesheet" href="assets/css/slick.min.css">
     <!-- Theme Custom CSS -->
-    <link rel="stylesheet" href="assets/css/style.css?v=20260814b">
+    <link rel="stylesheet" href="assets/css/style.css?v=20260814c">
 
     <script type="application/ld+json">
 {
@@ -145,9 +145,51 @@
   ==============================-->
     <div class="preloader  ">
         <div class="preloader-inner">
-            <div class="loader"></div>
+            <svg class="loader-eye" viewBox="0 0 190 150" xmlns="http://www.w3.org/2000/svg"
+                role="img" aria-label="Loading">
+                <!-- brow: lifts as the eye closes -->
+                <g transform="translate(95,40)">
+                    <g>
+                        <animateTransform attributeName="transform" type="translate"
+                            values="0 0; 0 0; 0 6; 0 -3; 0 0" keyTimes="0; 0.6; 0.72; 0.84; 1"
+                            dur="1.9s" calcMode="spline"
+                            keySplines=".4 0 .6 1; .4 0 .6 1; .4 0 .6 1; .4 0 .6 1"
+                            repeatCount="indefinite" />
+                        <g transform="translate(-95,-40)">
+                            <path d="M28 44 C58 12, 132 12, 162 40" />
+                            <path class="brow-hair" d="M44 36 C50 27, 54 25, 60 22" />
+                            <path class="brow-hair" d="M60 27 C66 19, 72 17, 78 15" />
+                            <path class="brow-hair" d="M78 22 C86 15, 92 14, 99 14" />
+                            <path class="brow-hair" d="M99 17 C107 15, 114 16, 120 18" />
+                            <path class="brow-hair" d="M120 22 C128 20, 134 23, 140 27" />
+                        </g>
+                    </g>
+                </g>
+
+                <!-- eye: squashes shut, then opens -->
+                <g transform="translate(95,96)">
+                    <g>
+                        <animateTransform attributeName="transform" type="scale"
+                            values="1 1; 1 1; 1 0.06; 1 1" keyTimes="0; 0.64; 0.72; 1"
+                            dur="1.9s" calcMode="spline"
+                            keySplines=".4 0 .6 1; .4 0 .6 1; .4 0 .6 1"
+                            repeatCount="indefinite" />
+                        <g transform="translate(-95,-96)">
+                            <path class="eye-outline" d="M20 96 C56 56, 134 56, 170 96 C134 136, 56 136, 20 96 Z" />
+                            <circle class="eye-iris" cx="95" cy="96" r="22" />
+                            <circle class="eye-pupil" cx="95" cy="96" r="9" />
+                            <circle class="eye-glint" cx="103" cy="88" r="4" />
+                            <path class="eye-lash" d="M36 74 L26 64" />
+                            <path class="eye-lash" d="M60 62 L54 50" />
+                            <path class="eye-lash" d="M95 57 L95 44" />
+                            <path class="eye-lash" d="M130 62 L136 50" />
+                            <path class="eye-lash" d="M154 74 L164 64" />
+                        </g>
+                    </g>
+                </g>
+            </svg>
         </div>
-    </div><svg viewBox="0 0 150 150" class="svg-hidden">
+    </div><script>(function(){try{if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches){var s=document.querySelector('.loader-eye');if(s&&s.pauseAnimations)s.pauseAnimations();}}catch(e){}})();</script><svg viewBox="0 0 150 150" class="svg-hidden">
         <path id="textPath" d="M 0,75 a 75,75 0 1,1 0,1 z"></path>
     </svg><!--==============================
     Mobile Menu

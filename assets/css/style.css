@@ -16027,3 +16027,49 @@ blockquote.vs-quote cite:before {
         font-size: 26px;
     }
 }
+
+/*------------------- 4.33. Preloader eye -------------------*/
+.loader-eye {
+    display: block;
+    width: 148px;
+    height: 117px;
+    margin: 0 auto;
+    overflow: visible;
+}
+
+.loader-eye path,
+.loader-eye circle {
+    fill: none;
+    stroke: var(--theme-color);
+    stroke-width: 5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.loader-eye .brow-hair,
+.loader-eye .eye-lash {
+    stroke-width: 3.5;
+    opacity: 0.75;
+}
+
+.loader-eye .eye-iris {
+    fill: rgba(154, 86, 58, 0.18);
+    stroke-width: 4;
+}
+
+.loader-eye .eye-pupil {
+    fill: var(--title-color);
+    stroke: none;
+}
+
+.loader-eye .eye-glint {
+    fill: var(--white-color);
+    stroke: none;
+}
+
+@media (max-width: 575px) {
+    .loader-eye {
+        width: 118px;
+        height: 93px;
+    }
+}
