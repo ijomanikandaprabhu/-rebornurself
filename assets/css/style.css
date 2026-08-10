@@ -15708,3 +15708,86 @@ blockquote.vs-quote cite:before {
     justify-content: center;
   }
 }
+
+/*==============================
+  Footer services row
+==============================*/
+.footer-services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px 30px;
+  max-width: 720px;
+  margin: 0 auto 26px;
+  padding: 0 20px;
+}
+.footer-services a {
+  position: relative;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+  transition: color ease 0.3s;
+}
+.footer-services a:hover {
+  color: var(--white-color);
+}
+.footer-services a:focus-visible {
+  outline: 2px solid var(--white-color);
+  outline-offset: 3px;
+}
+@media (max-width: 767px) {
+  .footer-services {
+    gap: 8px 18px;
+  }
+  .footer-services a {
+    font-size: 13px;
+  }
+}
+
+/*==============================
+  Button corners
+  The theme's .vs-btn shipped with square corners while every button
+  added since is a 50px pill. Round them so the site is consistent.
+==============================*/
+.vs-btn,
+.vs-btn.style6,
+.vs-btn.style7,
+.vs-btn.style8,
+.vs-btn.style9 {
+  border-radius: 50px;
+}
+.vs-btn::before,
+.vs-btn::after {
+  border-radius: inherit;
+}
+.vs-btn.style9 .btn-icon,
+.vs-btn.style9 i {
+  border-radius: 50px;
+}
+
+/*==============================
+  Card corners
+  Cards had drifted to 14px, 12px, 8px and square. One radius so the
+  site reads as a set: 12px, matching the gallery tiles and the
+  location card.
+==============================*/
+.svc-card,
+.booking-info .info-card,
+.info-card,
+.journey-card,
+.location-card,
+.visit-panel,
+.gal-cell a,
+.feature-style2,
+.testi-style3,
+.schedule-box1 .schedule-img,
+.gallery-style1 .gallery-img {
+  border-radius: 12px;
+}
+.location-card,
+.visit-panel {
+  overflow: hidden;
+}
+/* the treatment photo beside the contact form */
+.schedule-box1 .schedule-img img {
+  border-radius: 12px;
+}
