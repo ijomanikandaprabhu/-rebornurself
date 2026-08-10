@@ -15560,3 +15560,38 @@ blockquote.vs-quote cite:before {
   outline: 2px solid var(--theme-color);
   outline-offset: 3px;
 }
+
+/*==============================
+  Home gallery: even tiles
+  The full gallery page keeps masonry so before/after collages show
+  whole; on the home page the row should read as a tidy grid, so tiles
+  are a uniform 3:4 and the lightbox shows the uncropped original.
+==============================*/
+.gal-home .gal-grid {
+  columns: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+.gal-home .gal-cell {
+  margin-bottom: 0;
+}
+.gal-home .gal-cell a {
+  aspect-ratio: 1 / 1;
+}
+.gal-home .gal-cell img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+@media (max-width: 991px) {
+  .gal-home .gal-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 575px) {
+  .gal-home .gal-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+}
